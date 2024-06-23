@@ -83,6 +83,7 @@ nav .logo-name .logo_name {
   font-weight: 600;
   color: var(--text-color);
   margin-left: 10px;
+  transition: var(--tran-05);
 }
 
 nav.close .logo_name {
@@ -152,8 +153,8 @@ nav.close li a .link-name {
   color: var(--primary-color);
 }
 
-body.dark li a:hover i,
-body.dark li a:hover .link-name {
+body.dark .nav-links li a:hover i,
+body.dark .nav-links li a:hover .link-name {
   color: var(--text-color);
 }
 
@@ -233,6 +234,8 @@ nav.close ~ .dashboard {
   padding: 10px 14px;
   background-color: var(--panel-color);
   transition: var(--tran-05);
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
 nav.close ~ .dashboard .top {
@@ -281,4 +284,212 @@ nav.close ~ .dashboard .top {
 .top img {
   width: 40px;
   border-radius: 50%;
+}
+
+/* CONTENT DASHBOARD */
+.dashboard .dash-content {
+  padding-top: 50px;
+}
+
+.dash-content .title {
+  display: flex;
+  align-items: center;
+  margin: 60px 0 30px 0;
+}
+
+.dash-content .title i {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  color: var(--title-icon-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.dash-content .title .text {
+  font-size: 30px;
+  font-weight: 500;
+  margin-left: 10px;
+  color: var(--text-color);
+}
+
+.dash-content .boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dash-content .boxes .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3 - 15px);
+  border-radius: 12px;
+  padding: 15px 20px;
+  background-color: var(--box1-color);
+  transition: var(--tran-05);
+}
+
+.boxes .box i {
+  font-size: 35px;
+  color: var(--text-color);
+}
+
+.boxes .box .text {
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.boxes .box .number {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.boxes .box.box2 {
+  background-color: var(--box2-color);
+}
+
+.boxes .box.box3 {
+  background-color: var(--box3-color);
+}
+
+.dash-content .activity .activity-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.activity .activity-data {
+  display: flex;
+  /* width: calc(100% / 5 - 15px); */
+}
+
+.activity-data .data {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+.activity-data .data-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.activity-data .data .data-list {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
+  white-space: nowrap;
+  color: var(--text-color);
+}
+
+@media (max-width: 1000px) {
+  nav {
+    width: 73px;
+  }
+  nav.close {
+    width: 250px;
+  }
+  nav .logo_name {
+    opacity: 0;
+    pointer-events: none;
+  }
+  nav.close .logo_name {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav li a .link-name {
+    opacity: 0;
+    pointer-events: none;
+  }
+  nav.close li a .link-name {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav ~ .dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+  nav.close ~ .dashboard {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  nav ~ .dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+  nav.close ~ .dashboard .top {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .activity .activity-data {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 780px) {
+  .dash-content .boxes .box {
+    width: calc(100% / 2 - 15px);
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .dash-content .boxes .box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    width: 73px;
+  }
+  nav.close {
+    width: 73;
+  }
+  nav .logo_name {
+    opacity: 0;
+    pointer-events: none;
+  }
+  nav.close .logo_name {
+    opacity: 0;
+    pointer-events: none;
+  }
+  nav li a .link-name {
+    opacity: 0;
+    pointer-events: none;
+  }
+  nav.close li a .link-name {
+    opacity: 0;
+    pointer-events: none;
+  }
+  nav ~ .dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+  nav.close ~ .dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+  nav ~ .dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+  nav.close ~ .dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
+  }
+  .dashboard .top .sidebar-toggle {
+    display: none;
+  }
 }
