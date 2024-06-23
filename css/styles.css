@@ -121,8 +121,12 @@ nav .menu-items {
   background-color: var(--primary-color);
 }
 
-i {
-  font-size: 22px;
+body.dark li a:hover:before {
+  background-color: var(--text-color);
+}
+
+.menu-items li a i {
+  font-size: 24px;
   min-width: 45px;
   height: 100%;
   display: flex;
@@ -146,6 +150,11 @@ nav.close li a .link-name {
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name {
   color: var(--primary-color);
+}
+
+body.dark li a:hover i,
+body.dark li a:hover .link-name {
+  color: var(--text-color);
 }
 
 .menu-items .logout-mode {
@@ -267,4 +276,9 @@ nav.close ~ .dashboard .top {
   top: 50%;
   transform: translateY(-50%);
   color: var(--black-light-color);
+}
+
+.top img {
+  width: 40px;
+  border-radius: 50%;
 }
