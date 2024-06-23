@@ -6,9 +6,10 @@
     <!----===== CSS ===== -->
     <link rel="stylesheet" href="./css/styles.css" />
     <!----===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <title>Admin Dashboard Panel</title>
   </head>
+
   <body>
     <nav>
       <div class="logo-name">
@@ -20,26 +21,26 @@
       <div class="menu-items">
         <ul class="nav-links">
           <li>
-            <a href="">
-              <i class="uil uil-estate"></i>
+            <a href="" class="active">
+              <i class="bi bi-house"></i>
               <span class="link-name">Dashboard</span>
             </a>
           </li>
           <li>
             <a href="">
-              <i class="uil uil-user"></i>
+              <i class="bi bi-people"></i>
               <span class="link-name">Users</span>
             </a>
           </li>
           <li>
             <a href="">
-              <i class="uil uil-file-alt"></i>
+              <i class="bi bi-file-earmark-post"></i>
               <span class="link-name">Posts</span>
             </a>
           </li>
           <li>
             <a href="">
-              <i class="uil uil-envelope"></i>
+              <i class="bi bi-chat-left-text"></i>
               <span class="link-name">Messages</span>
             </a>
           </li>
@@ -47,13 +48,13 @@
         <ul class="logout-mode">
           <li>
             <a href="">
-              <i class="uil uil-signout"></i>
+              <i class="bi bi-box-arrow-in-right"></i>
               <span class="link-name">Logout</span>
             </a>
           </li>
           <li class="mode">
             <a href="">
-              <i class="uil uil-moon"></i>
+              <i class="bi bi-moon"></i>
               <span class="link-name">Dark Mode</span>
             </a>
             <div class="mode-toggle">
@@ -63,6 +64,17 @@
         </ul>
       </div>
     </nav>
+
+    <section class="dashboard">
+      <div class="top">
+        <i class="bi bi-list sidebar-toggle"></i>
+        <div class="search-box">
+          <i class="bi bi-search"></i>
+          <input type="text" placeholder="Buscar" />
+        </div>
+      </div>
+    </section>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
