@@ -81,8 +81,19 @@ nav .menu-items {
 .menu-items li a {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 50px;
   text-decoration: none;
+  position: relative;
+}
+
+.nav-links li a:hover:before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
 }
 
 i {
@@ -99,4 +110,47 @@ i {
   font-size: 18px;
   font-weight: 400;
   color: var(--black-light-color);
+}
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name {
+  color: var(--primary-color);
+}
+
+.menu-items .mode {
+  display: flex;
+  align-items: center;
+}
+
+.menu-items .mode-toggle {
+  position: absolute;
+  right: 14px;
+  height: 50px;
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mode-toggle .switch {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  width: 40px;
+  border-radius: 25px;
+  background-color: var(--toggle-color);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--panel-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
 }
